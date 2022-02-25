@@ -15,6 +15,9 @@
 		D3AA0C5027C6E1D800FF606A /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA0C4F27C6E1D800FF606A /* JournalTableViewController.swift */; };
 		D3AA0C5227C6E24200FF606A /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA0C5127C6E24200FF606A /* Entry.swift */; };
 		D3AA0C5427C6E37700FF606A /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA0C5327C6E37700FF606A /* EntryController.swift */; };
+		D3D61A7B27C7D00B00C32ECD /* NotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D61A7A27C7D00B00C32ECD /* NotebookViewController.swift */; };
+		D3D61A7D27C7D0CB00C32ECD /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D61A7C27C7D0CB00C32ECD /* Notebook.swift */; };
+		D3D61A7F27C7D0D400C32ECD /* NotebookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D61A7E27C7D0D400C32ECD /* NotebookController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		D3AA0C4F27C6E1D800FF606A /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
 		D3AA0C5127C6E24200FF606A /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		D3AA0C5327C6E37700FF606A /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		D3D61A7A27C7D00B00C32ECD /* NotebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookViewController.swift; sourceTree = "<group>"; };
+		D3D61A7C27C7D0CB00C32ECD /* Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
+		D3D61A7E27C7D0D400C32ECD /* NotebookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +97,10 @@
 		D3AA0C4D27C6E1BF00FF606A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3AA0C5327C6E37700FF606A /* EntryController.swift */,
 				D3AA0C5127C6E24200FF606A /* Entry.swift */,
+				D3D61A7C27C7D0CB00C32ECD /* Notebook.swift */,
+				D3D61A7E27C7D0D400C32ECD /* NotebookController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				D3AA0C4F27C6E1D800FF606A /* JournalTableViewController.swift */,
-				D3AA0C5327C6E37700FF606A /* EntryController.swift */,
+				D3D61A7A27C7D00B00C32ECD /* NotebookViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,11 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D61A7F27C7D0D400C32ECD /* NotebookController.swift in Sources */,
 				D3AA0C5227C6E24200FF606A /* Entry.swift in Sources */,
 				D3AA0C3827C6E11900FF606A /* AppDelegate.swift in Sources */,
 				D3AA0C5427C6E37700FF606A /* EntryController.swift in Sources */,
 				D3AA0C5027C6E1D800FF606A /* JournalTableViewController.swift in Sources */,
 				D3AA0C3A27C6E11900FF606A /* SceneDelegate.swift in Sources */,
+				D3D61A7B27C7D00B00C32ECD /* NotebookViewController.swift in Sources */,
+				D3D61A7D27C7D0CB00C32ECD /* Notebook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

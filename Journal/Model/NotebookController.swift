@@ -1,26 +1,28 @@
 //
-//  EntryController.swift
+//  NotebookController.swift
 //  Journal
 //
-//  Created by Gino Tasis on 2/23/22.
+//  Created by Gino Tasis on 2/24/22.
 //
 
 import Foundation
 
-class EntryController {
+class NotebookController {
     
-    static let shared = EntryController()
+    static let shared = NotebookController()
     
-    var entries: [Entry] = []
+    var notebooks: [Notebook] = []
     
-    func createEntryWith(title: String, body: String) {
-        let newEntry = Entry(title: title, body: body)
-        entries.append(newEntry)
+    func createNotebook(name: String) {
+        let newNotebook = Notebook(name: name)
+        notebooks.append(newNotebook)
+        saveToPersistenceStore()
     }
-    
-    func deleteEntry(entry: Entry) {
-        guard let index = entries.firstIndex(of: entry) else { return }
-        entries.remove(at: index)
+
+    func deleteNotebook(notebook: Notebook) {
+        let index = notebooks.firstIndex(of: notebook) ?? 0
+        notebooks.remove(at: index)
+        saveToPersistenceStore()
     }
     
     //Persistence Store
@@ -33,7 +35,7 @@ class EntryController {
     // save data
     func saveToPersistenceStore() {
         do {
-            let data = try JSONEncoder().encode(entries)
+            let data = try JSONEncoder().encode(notebooks)
             try data.write(to: persistentStore())
         }
         catch let saveError {
@@ -45,7 +47,7 @@ class EntryController {
     func loadFromPersistenceStore() {
         do {
             let data = try Data(contentsOf: persistentStore())
-            entries = try JSONDecoder().decode([Entry].self, from: data)
+            notebooks = try JSONDecoder().decode([Notebook].self, from: data)
         } catch {
             print(error)
         }
